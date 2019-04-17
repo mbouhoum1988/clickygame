@@ -10,18 +10,11 @@
   display: flex;
   justify-content: space-between;
 }
-.link {
+.link, .link:hover {
   text-decoration: none;
   color: #fff;
-  background: none;
+  background: blue;
   cursor: pointer;
-  border: none;
-  box-shadow: none;
-  border-style: none;
-}
-.link:hover, link:focus{
-  background: none;
-  box-shadow: none;
 }
 .jum-image{
   display: flex;

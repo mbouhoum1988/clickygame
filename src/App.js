@@ -141,10 +141,6 @@ class App extends Component {
     }
   };
 
-  handleReload = () => {
-    window.location.reload(true);
-  }
-
   render() {
     const images = getRandomImages();
 
@@ -154,7 +150,6 @@ class App extends Component {
           guess={this.state.guess}
           score={this.state.score}
           highscore={this.state.highscore}
-          handleReload={this.handleReload}
         />
         <Jumbotron />
         <Gallery images={images} clickimage={this.clickimage} />
