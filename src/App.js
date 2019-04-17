@@ -102,7 +102,7 @@ const images = [
   }
 ];
 
-function getRandomImages() {
+const getRandomImages = () => {
   return shuffle(images, { copy: true })
 }
 
