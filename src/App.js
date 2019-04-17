@@ -116,8 +116,6 @@ class App extends Component {
 
   clickimage = (evt) => {
     let id = evt.currentTarget.dataset.pid;
-    console.log(id,this.state.clicked)
-
     
     if (this.state.clicked.indexOf(id) === -1) {
       let { clicked, score, highscore } = this.state
@@ -143,6 +141,10 @@ class App extends Component {
     }
   };
 
+  handleReload = () => {
+    window.location.reload(true);
+  }
+
   render() {
     const images = getRandomImages();
 
@@ -152,6 +154,7 @@ class App extends Component {
           guess={this.state.guess}
           score={this.state.score}
           highscore={this.state.highscore}
+          handleReload={this.handleReload}
         />
         <Jumbotron />
         <Gallery images={images} clickimage={this.clickimage} />
